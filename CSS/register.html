@@ -1,0 +1,76 @@
+<html>
+    <head>
+        <title>Registration</title>
+        <style>
+            
+            .Div1{
+                background-color:rgba(160, 255, 105, 0.726);
+                position: absolute;
+                top: 100px;
+                left:100px;
+                right:100px;
+                border-radius: 10px;
+                bottom: 1px;
+            }
+            .Div2{
+                color:rgb(255, 0, 0);
+            }
+            .Div3{
+                color: red;
+            }
+            table{
+                color: red;
+            }
+            th{
+                color: red;
+            }
+            td{
+                color: green;
+            }
+            .SubmitButton{
+            width:150px;
+            height:40px;
+            font-size: 20px;
+            border:none;
+            background-color: green;
+            color: white;
+            border-radius: 20px;
+            cursor:pointer;
+            }
+        </style>
+    </head>
+    <body>
+        <div class="Div1">
+        <table width="40%" align="center">
+        <tr><th colspan="2">Registration</th></tr>
+        <tr><td> FirstName:</td><td><input type="text"/></td></tr>
+        <tr><td> LastName:</td><td><input type="text"/></td></tr>
+        <tr><td> Email:</td><td><input type="email"/></td></tr>
+        <tr><td> MobileNumber:</td><td><input type="text"/></td></tr>
+        <tr><td> DOB:</td><td><input type="date"/></td></tr>
+        <tr><td> UserName :</td><td><input type="text"/></td></tr>
+        <tr><td> Password :</td><td><input type="password"/></td></tr>
+        <tr><td> Gender :</td><td><div class="Div2">
+        <input type="radio" name="Gender">Male
+        <input type="radio" name="Gender">Female</td></tr></div>
+        <br><br>
+        <tr><td> Skills:</td><td><div class="Div3">
+              <input type="checkbox" id="C" name="C" value="C"/>    
+                 <label>C</label>  
+                 <input type="checkbox" id="C++" name="C++" value="C++"/>    
+                 <label>C++</label>
+              <input type="checkbox" id="Java" name="Java" value="Java" />    
+                 <label>Java</label> <br> <br>  </div>
+                 <tr><td> City </td><td>
+  <select name="city" id="city">
+    <option value="D1">SALEM</option>
+    <option value="D2">NAMAKKAL</option>
+    <option value="D3">ERODE</option></td></tr>
+  </select><br><br> 
+  <tr><td> Address: </td><td><textarea></textarea></td></tr> <br><br>
+      <tr><td><center> <input type="submit" value=Register class="SubmitButton"></center></td></tr>
+    </table>
+</div>
+        
+    </body>
+</html>
