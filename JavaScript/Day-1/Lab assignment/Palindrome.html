@@ -1,0 +1,33 @@
+<html>
+    <head>
+        <title>Palindrome</title>
+        <script>
+            function isPalindrome() {
+            var str = document.getElementById("n1").value;
+            let j = str.length - 1;
+            let flag=false;
+            for (let i = 0; i < str.length / 2; i++) {
+            if (str[i] == str[j]) {
+                flag=true;
+            }
+            j--;
+        }
+    if(flag==true)
+    {
+        document.getElementById("ResultDiv").innerHTML = "<b>" + str + " is a Palindrome</b>";
+    }
+    else
+    {
+        document.getElementById("ResultDiv").innerHTML = "<b>" + str + " is Not a Palindrome</b>";
+    }
+}
+        </script>
+    </head>
+    <body>
+        Enter Your String: <input type="text" id="n1"/>
+    <br><br>
+    <button onclick="isPalindrome()">Check Palindrome</button>
+    <br><br>
+    <div id="ResultDiv"></div>
+    </body>
+</html>

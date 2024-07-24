@@ -1,0 +1,26 @@
+<html>
+    <head>
+        <title>Literals</title>
+        <script>
+            function MyFunction(){
+                let skills=["C","C++","JAVA"];
+                document.write("<br>Array Elements : "+skills);
+                document.write("<br>ArraySize : "+skills.length);
+                document.write("<br>First Element : "+skills[0]);
+                document.write("<br>Last Element : "+skills[skills.length-1]);
+                skills.push("Python");
+                document.write("<br>Array Elements : "+skills);
+                skills.pop();
+                document.write("br>Array Elements : "+skills);
+                document.write("<br>Array Elememts :");
+                for(let i=0;i<skills.length;i++)
+            {
+                document.write("<br>"+skills[i]);
+            }
+            }
+        </script>
+    </head>
+    <body onload="MyFunction()">
+
+    </body>
+</html>

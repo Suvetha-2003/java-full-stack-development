@@ -1,0 +1,177 @@
+<html>
+    <head>
+        <title>Functions</title>
+        <script>
+            function Length(){
+                var str = document.getElementById("n1").value;
+                let l=str.length;
+                document.getElementById("ResultDiv").innerHTML ="<b> String Length is : "+ l+"</b>";
+            }
+            function Character(){
+                var str = document.getElementById("n2").value;
+                let n=parseInt(document.getElementById("n3").value);
+                let l=str.charAt(n);
+                document.getElementById("ResultDiv1").innerHTML ="<b>  Character at "+n+" "+"the position is "+ l+"</b>";
+            }
+            function Slice(){
+                var str = document.getElementById("n4").value;
+                let a=parseInt(document.getElementById("n5").value);
+                let b=parseInt(document.getElementById("n6").value);
+                let l=str.slice(a,b);
+                document.getElementById("ResultDiv2").innerHTML ="<b> The Characters are  : "+ l+"</b>";
+            }
+            function Substring(){
+                var str = document.getElementById("n7").value;
+                let a=parseInt(document.getElementById("n8").value);
+                let b=parseInt(document.getElementById("n9").value);
+                let l=str.substring(a,b);
+                document.getElementById("ResultDiv3").innerHTML ="<b> The Substring is  : "+ l+"</b>";
+            }
+            function Substr(){
+                var str = document.getElementById("n10").value;
+                let a=parseInt(document.getElementById("n11").value);
+                let b=parseInt(document.getElementById("n12").value);
+                let l=str.substr(a,b);
+                document.getElementById("ResultDiv4").innerHTML ="<b> The Substring is  : "+ l+"</b>";
+            }
+            function uppercase(){
+                var str = document.getElementById("n13").value;
+                let l=str.toUpperCase();
+                document.getElementById("ResultDiv5").innerHTML ="<b> The UpperCase of the Given String  is : "+ l+"</b>";
+            }
+            function lowercase(){
+                var str = document.getElementById("n14").value;
+                let l=str.toLowerCase();
+                document.getElementById("ResultDiv6").innerHTML ="<b> The LowerCase of the Given String  is : "+ l+"</b>";
+            }
+            function Concat(){
+                var str1 = document.getElementById("n15").value;
+                var str2 = document.getElementById("n16").value;
+                var str=str1 .concat(str2);
+                document.getElementById("ResultDiv7").innerHTML ="<b> The Concatination of the Given String  is : " + str+"</b>"
+            }
+            function Trim(){
+                var str = document.getElementById("n17").value;
+                let l=str.trim();
+                document.getElementById("ResultDiv8").innerHTML ="<b> After Trim the String is : "+ l+"</b>";
+            }
+            function TrimStart(){
+                var str = document.getElementById("n18").value;
+                let l=str.trimStart();
+                document.getElementById("ResultDiv9").innerHTML ="<b> After Trim the String is : "+ l+"</b>";
+            }
+            function TrimEnd(){
+                var str = document.getElementById("n19").value;
+                let l=str.trimEnd();
+                document.getElementById("ResultDiv10").innerHTML ="<b> After Trim the String is : "+ l+"</b>";
+            }
+            function Repeat(){
+                var str = document.getElementById("n20").value;
+                let a=parseInt(document.getElementById("n21").value);
+                let l=str.repeat(a);
+                document.getElementById("ResultDiv11").innerHTML ="<b> The Repeatation of the string is : "+ l+"</b>";
+            }
+            function Replace(){
+                var str = document.getElementById("n22").value;
+                var str1 = document.getElementById("n23").value;
+                var str2 = document.getElementById("n24").value;
+                var l=str.replace(str1,str2);
+                document.getElementById("ResultDiv12").innerHTML ="<b> After Replace the string is : "+ l+"</b>";
+            }
+            function Replaceall(){
+                var str = document.getElementById("n25").value;
+                var str1 = document.getElementById("n26").value;
+                var str2 = document.getElementById("n27").value;
+                var l=str.replaceAll(str1,str2);
+                document.getElementById("ResultDiv13").innerHTML ="<b> After Replace the string is : "+ l+"</b>";
+            }
+            function Split(){
+                var str = document.getElementById("n28").value;
+                var l=str.split(" ");
+                document.getElementById("ResultDiv14").innerHTML ="<b> After Split the string is : "+ l+"</b>";
+            }
+        </script>
+    </head>
+    <body>
+        Enter Your String : <input type="text" id="n1"/><br><br>
+        <button onclick="Length()">Length</button><br><br>
+        <div id="ResultDiv"></div>
+        <br><br>
+    Enter Your String : <input type="text" id="n2"/><br><br>
+    Enter Your Position : <input type="text" id="n3"/>
+    <br><br>
+    <button onclick="Character()">Character</button><br><br>
+    <div id="ResultDiv1"></div>
+    <br><br>
+    Enter Your String : <input type="text" id="n4"/><br><br>
+    Enter Your Start Position : <input type="text" id="n5"><br><br>
+    Enter Your End Position : <input type="text" id="n6"><br><br>
+    <button onclick="Slice()">Slice</button><br><br>
+    <div id="ResultDiv2"></div>
+    <br><br>
+    Enter Your String : <input type="text" id="n7"/><br><br>
+    Enter Your Start Position : <input type="text" id="n8"><br><br>
+    Enter Your End Position : <input type="text" id="n9"><br><br>
+    <button onclick="Substring()">Substring</button><br><br>
+    <div id="ResultDiv3"></div>
+    <br><br>
+    Enter Your String : <input type="text" id="n10"/><br><br>
+    Enter Your Start Position : <input type="text" id="n11"><br><br>
+    Enter Your End Position : <input type="text" id="n12"><br><br>
+    <button onclick="Substr()">Substr</button><br><br>
+    <div id="ResultDiv4"></div>
+    <br><br>
+    Enter Your String : <input type="text" id="n13"/><br><br>
+        <button onclick="uppercase()">ToUpperCase</button><br><br>
+        <div id="ResultDiv5"></div>
+        <br><br>
+        Enter Your String : <input type="text" id="n14"/><br><br>
+        <button onclick="lowercase()">ToLowerCase</button><br><br>
+        <div id="ResultDiv6"></div>
+        <br><br>
+        Enter Your String1 : <input type="text" id="n15"/><br><br>
+        Enter Your String2 : <input type="text" id="n16"/><br><br>
+        <button onclick="Concat()">Concat</button><br><br>
+        <div id="ResultDiv7"></div>
+        <br><br>
+        Enter Your String : <input type="text" id="n17"/><br><br>
+        <button onclick="Trim()">Trim</button><br><br>
+        <div id="ResultDiv8"></div>
+        <br><br>
+        Enter Your String : <input type="text" id="n18"/><br><br>
+        <button onclick="TrimStart()">TrimStart</button><br><br>
+        <div id="ResultDiv9"></div>
+        <br><br>
+        Enter Your String : <input type="text" id="n19"/><br><br>
+        <button onclick="TrimEnd()">TrimEnd</button><br><br>
+        <div id="ResultDiv10"></div>
+        <br><br>
+        Enter Your String : <input type="text" id="n20"/><br><br>
+        Enter Number of Repeatation : <input type="text" id="n21"><br><br>
+        <button onclick="Repeat()">Repeat</button><br><br>
+        <div id="ResultDiv11"></div>
+        <br><br>
+        Enter Your Sentence : <input type="text" id="n22"/><br><br>
+        Enter the Search Word : <input type="text" id="n23"><br><br>
+        Enter the Replace Word : <input type="text" id="n24"><br><br>
+        <button onclick="Replace()">Replace</button><br><br>
+        <div id="ResultDiv12"></div>
+        <br><br>
+        Enter Your Sentence : <input type="text" id="n25"/><br><br>
+        Enter the Search Word : <input type="text" id="n26"><br><br>
+        Enter the Replace Word : <input type="text" id="n27"><br><br>
+        <button onclick="Replaceall()">ReplaceAll</button><br><br>
+        <div id="ResultDiv13"></div>
+        <br><br>
+        Enter Your Sentence : <input type="text" id="n28"/><br><br>
+        <button onclick="Split()">Split</button><br><br>
+        <div id="ResultDiv14"></div>
+        <br>
+        Select Operation : <Select id="op">
+            <option value="add">Addition</option>
+            <option value="sub">Subtraction</option>
+            <option value="mul">multiplication</option>
+            <option value="div">Division</option>
+        </Select>
+    </body>
+</html>
