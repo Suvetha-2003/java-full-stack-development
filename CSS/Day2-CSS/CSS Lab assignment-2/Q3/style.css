@@ -1,0 +1,50 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+body {
+  padding: 8rem;
+}
+
+.container {
+  margin-top: 1rem;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 290px));
+  grid-gap: 1rem;
+  padding: 2rem;
+  justify-content: center;
+  box-shadow: 0 1px 1px #000;
+  border-top: 5px solid;
+  border-left: 1px solid ;
+  border-right: 1px solid;
+}
+img {
+  background-position: top;
+  background-size: cover;
+  height: 200px;
+  width: 290px;
+  box-shadow: 0 2px 10px #000;
+  cursor: pointer;
+  transition: all 0.2s;
+  border-radius: 10px;
+  border: 1px solid black;
+}
+img:hover {
+  box-shadow: none;
+  transform: scale(1.1);
+}
+h2{
+  border: 2px solid black;
+  border-radius: 20px;
+  width: 90%;
+  background-color: black;
+  color: white;
+  padding: 15px;
+  box-shadow: orange inset 4px 4px;
+  border-top: orange;
+  border-left: orange;
+  position: absolute;
+  top: 20px;
+  left:70px;
+}

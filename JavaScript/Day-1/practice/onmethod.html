@@ -1,0 +1,23 @@
+<html>
+    <head>
+        <title>My First Web Page</title>
+        <script>
+            function Factorial(){
+                var a=parseInt(document.getElementById("n1").value); 
+            var ans = 1; 
+            for(let i = 1; i <= a; i++) {
+                ans = ans * i; }
+        document.getElementById("ResultDiv").innerHTML="<b>Factorial : "+ans;
+}
+            
+        </script>
+    </head>
+    <body>
+        Enter Your Number : <input type="text" id="n1" value="Enter positive Number" onfocus="this.value='' " onblur="Factorial()"/>
+        <br><br>
+        <br><br>
+        <div id="ResultDiv">
+
+        </div>
+    </body>
+</html>
