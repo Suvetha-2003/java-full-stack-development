@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calculator</title>
+    <style>
+        body {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            background-color: #f0f0f0;
+            margin: 0;
+        }
+        .calculator {
+            border: 2px solid black;
+            width: 300px;
+            background-color: rgb(136, 133, 133);
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 5px 5px 7px rgba(0, 0, 0, 0.6);
+            text-align: center;
+        }
+        .display {
+            width: 90%;
+            height: 60px;
+            font-size: 2em;
+            text-align: right;
+            margin-bottom: 10px;
+            padding: 0 10px;
+            box-shadow: inset 1px 1px black;
+            border: 1px solid black;
+            border-radius: 5px;
+            background-color: white;
+        }
+        .btn {
+            width: 100%;
+            height: 50px;
+            font-size: 1.2em;
+            background-color: rgb(7, 172, 172);
+            border-radius: 5px;
+            border: none;
+            cursor: pointer;
+            box-shadow: 1px 1px white;
+            border: 2px solid black;
+            color: white;
+            transition: background-color 0.3s;
+        }
+        .btn:hover {
+            background-color: rgb(0, 140, 140);
+        }
+        table {
+            width: 100%;
+        }
+        td {
+            padding: 5px;
+        }
+    </style>
+</head>
+<body>
+    <div class="calculator">
+        <input type="text" id="display" class="display" value="0" readonly>
+        <table>
+            <tr>
+                <td><input type="button" value="C" class="btn" onclick="Clear()"></td>
+                <td><input type="button" value="%" class="btn" onclick="Solve('%')"></td>
+                <td><input type="button" value="←" class="btn" onclick="Back()"></td>
+                <td><input type="button" value="/" class="btn" onclick="Solve('/')"></td>
+            </tr>
+            <tr>
+                <td><input type="button" value="7" class="btn" onclick="Solve('7')"></td>
+                <td><input type="button" value="8" class="btn" onclick="Solve('8')"></td>
+                <td><input type="button" value="9" class="btn" onclick="Solve('9')"></td>
+                <td><input type="button" value="*" class="btn" onclick="Solve('*')"></td>
+            </tr>
+            <tr>
+                <td><input type="button" value="4" class="btn" onclick="Solve('4')"></td>
+                <td><input type="button" value="5" class="btn" onclick="Solve('5')"></td>
+                <td><input type="button" value="6" class="btn" onclick="Solve('6')"></td>
+                <td><input type="button" value="-" class="btn" onclick="Solve('-')"></td>
+            </tr>
+            <tr>
+                <td><input type="button" value="1" class="btn" onclick="Solve('1')"></td>
+                <td><input type="button" value="2" class="btn" onclick="Solve('2')"></td>
+                <td><input type="button" value="3" class="btn" onclick="Solve('3')"></td>
+                <td><input type="button" value="+" class="btn" onclick="Solve('+')"></td>
+            </tr>
+            <tr>
+                <td><input type="button" value="00" class="btn" onclick="Solve('00')"></td>
+                <td><input type="button" value="0" class="btn" onclick="Solve('0')"></td>
+                <td><input type="button" value="." class="btn" onclick="Solve('.')"></td>
+                <td><input type="button" value="=" class="btn" onclick="Calculate()"></td>
+            </tr>
+        </table>
+    </div>
+
+    <script>
+        function Solve(val) {
+            var v = document.getElementById('display');
+            if (v.value === '0') {
+                v.value = val;
+            } else {
+                v.value += val;
+            }
+        }
+
+        function Clear() {
+            document.getElementById('display').value = '0';
+        }
+
+        function Back() {
+            let v = document.getElementById('display');
+            v.value = v.value.slice(0, -1) || '0';
+        }
+
+        function Calculate() {
+            let v = document.getElementById('display');
+            try {
+                v.value = eval(v.value.replace('%', '/100'));
+            } catch (e) {
+                v.value = 'Error';
+            }
+        }
+    </script>
+</body>
+</html>

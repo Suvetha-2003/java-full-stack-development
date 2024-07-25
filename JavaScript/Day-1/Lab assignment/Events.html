@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>My First Web Page</title>
+    <script>
+        function Name(){
+            confirm("Do you want to Know my Name?");
+        }
+        function greeting(){
+                let x=document.getElementById("n").style.backgroundColor="red";
+                x.value=x.value.toUpperCase();
+            }
+
+        function showDate() {
+            document.getElementById('demo').innerHTML = new Date();
+        }
+    </script>
+</head>
+<body onload="Name()">
+    <button onclick="Name()">Click Me</button><br><br>
+    Enter tha Name: <input type="text" id="n" onblur="greeting()" onfocus="greeting()"><br><br>
+    <button onclick="showDate()">The time is?</button>
+    <p id="demo"></p>
+</body>
+</html>
