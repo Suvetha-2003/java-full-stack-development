@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Snapdeal Clone</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.4.1/dist/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+    <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js" integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+
+    <style>
+        .Div a {
+            font-size: medium;
+            padding-left: 30px;
+            position: relative;
+            color: white;
+            font-size: 10px;
+            left: 40%;
+        }
+        .navbar img {
+            width: 150px;
+            display: flex;
+            justify-content: start;
+            align-items: start;
+            position: relative;
+            left: 20px;
+        }
+        .Div {
+            display: flex;
+            align-items: center;
+        }
+        .sidebar {
+            height: 100%;
+            position: absolute;
+            left: 0;
+            top: 0;
+            padding-top: 0; 
+            width: 160px;
+            background-color: white;
+            border-right: 1px solid #dee2e6;
+            margin-top: 130px;
+            left: 40px;
+            font-size: 11px;
+        }
+        .sidebar img {
+            width: 20px;
+        }
+        .sidebar a {
+            display: block;
+            padding: 10px;
+            text-decoration: none;
+            color: #333;
+        }
+        .sidebar a:hover {
+            background-color: #e2e6ea;
+        }
+        .topnav {
+            overflow: hidden;
+            background-color: #FFFFFF;
+            margin-left: 210px;
+            width: 780px;
+        }
+        .topnav a {
+            float: left;
+            color: gray;
+            text-align: center;
+            padding: 14px 28px;
+            text-decoration: none;
+            font-size: 17px;
+        }
+        .topnav a:hover {
+            border-bottom: 2px solid;
+        }
+        .menubar {
+            display: flex;
+            flex-wrap: nowrap;
+            margin-left: 210px;
+            overflow-x: auto;
+            background-color: #F7F7F7;
+        }
+        .menubar a {
+            display: inline-block;
+            height: 450px;
+            width: 300px;
+            margin-right: 10px; 
+            cursor: pointer;
+        }
+        .menubar img {
+            width: 220px;
+            height: 300px;
+            transition: transform 0.3s; /* Smooth transition */
+        }
+        .menubar img:hover {
+            transform: scale(1.1); /* Scale the image */
+            box-shadow: #333;
+        }
+        span {
+            display: inline-block;
+            margin-right: 10px; 
+            cursor: pointer;
+        }
+        p {
+            display: inline-block;
+            margin-right: 10px; 
+            cursor: pointer;
+        }
+        p:hover, span:hover, img:hover {
+            background-color: #e2e6ea;
+        }
+    </style>
+</head>
+<body style="background-color: #f8f9fa;">
+    <div class="Div" style="font-size:10px;background-color: #C7003D; height: 30px; color: white;">
+        <strong style=" position: relative;left: 40px;">Brand Waali quality,Bazaar Waali Deal!</strong>
+        <a href="#"><i class="fas fa-globe"></i> Impact@Snapdeal</a>
+        <a href="#"><i class="fas fa-question-circle"></i> Help Center</a>
+        <a href="#"><i class="fas fa-store"></i> Sell On Snapdeal</a>
+        <a href="#"><i class="fas fa-mobile-alt"></i> Download App</a>
+        <a href="#"><i class="fas fa-hand-holding-heart"></i> Donate For Elderly</a>
+    </div>
+    <div class="navbar" style="background-color: #E40046; margin-top: 0px; height: 80px;">
+        <img src="https://i3.sdlcdn.com/img/snapdeal/darwin/logo/sdLatestLogo.svg" width="30" height="30" alt="">
+        <div class="input-group" style="width: 50%; position: relative;right: 400px; ">
+            <input type="search" class="form-control rounded" placeholder="Search products & brands"/>
+            <button type="button" class="btn btn-primary" style="background-color: black; border: 0;">
+                <i class="fas fa-search"></i> Search
+            </button>
+        </div>
+    </div>
+    <div class="sidebar">
+        <div class="header"><h6>TOP CATEGORIES</h6></div><br>
+        <p><span><img id="image1" src="https://n1.sdlcdn.com/imgs/k/v/x/Men_sitenavigation-b972a.jpg"></span>Men's Fashion<br></p>
+        <p><span><img id="image1" src="https://n1.sdlcdn.com/imgs/k/v/x/WoMen_sitenav-5a8ca.jpg"></span>Women's Fashion<br></p>
+        <p><span><img id="image1" src="https://n1.sdlcdn.com/imgs/k/v/x/HOme_sitenavigation-d7a00.jpg"></span>Home & Kitchen<br></p>
+        <p><span><img id="image1" src="https://n4.sdlcdn.com/imgs/k/v/x/Toys_Sitenavigation-ef666.jpg"></span>Toys, Kids' Fashion<br></p>
+        <p><span><img id="image1" src="https://n2.sdlcdn.com/imgs/k/v/x/Beauty_Site_navigation-5f3be.jpg"></span>Beauty & Health<br><br></p>
+        <div class="header">MORE CATEGORIES</div><br>
+        <a class="icon-link" href="#">Automotives</a>
+        <a class="icon-link" href="#"> Mobile & Accessories</a>
+        <a class="icon-link" href="#">Electronics</a>
+        <a class="icon-link" href="#">Sports, Fitness & Outdoor</a>
+        <a class="icon-link" href="#">Computers & Gaming</a>
+        <a class="icon-link" href="#">Books, Media & Music</a>
+        <a class="icon-link" href="#">Hobbies</a><br>
+            <div class="header">TRENDING SEARCHES</div><br>
+            <a class="icon-link" href=""><i class="fas fa-search"></i>  Kitchen Product</a>
+            <a class="icon-link" href="#"><i class="fas fa-search"></i>  Shoes For Men</a>
+            <a class="icon-link" href="#"><i class="fas fa-search"></i>  Kurti Set</a>
+            <a class="icon-link" href="#"><i class="fas fa-search"></i>  Sandal Men</a>
+            <a class="icon-link" href="#"><i class="fas fa-search"></i>  Sport Shoe Men</a>
+    </div>
+    <div class="img" style="margin-left: 210px;margin-top: 20px;display: flex;">
+        <img src="https://n2.sdlcdn.com/imgs/k/s/i/ethnicwear-ef4d9.jpg" style="width: 750px; height: 282px;">
+        <figure>
+        <img src="image.png" style="width: 200px;padding-left: 10px;height: 138px;">
+        <figcaption>Fig.1 - Trulli, Puglia, Italy.</figcaption>
+    </figure>
+    </div>
+    <div class="topnav">
+        <a href="#">ONDC</a>
+        <a href="#">BOB Card</a>
+        <a href="#">ETHNIC WEAR</a>
+        <a href="#">KITCHEN WARE</a>
+        <a href="#">HOME FURNISHING</a>
+    </div>
+    <p style="margin-left: 210px;padding-top: 30px;">TRENDING PRODUCTS</p>
+    <div class="menubar">
+        <a href="#"><img src="https://t1.sdlcdn.com/imgs/i/n/r/large/bhawna-collection-Loard-Shiv-Trishul-SDL890408077-1-86933.jpeg"></a>
+        <a href="#"><img src="https://t2.sdlcdn.com/imgs/j/d/1/large/Aadi-Black-Casual-Shoes-SDL452425212-3-254be.jpeg"></a>
+        <a href="#"><img src="https://t3.sdlcdn.com/imgs/i/u/v/large/HeelSocks1-aeb5a.jpg"></a>
+        <a href="#"><img src="https://t3.sdlcdn.com/imgs/i/z/j/large/bc12-606ed.jpg"></a>
+    </div>
+</body>
+</html>
