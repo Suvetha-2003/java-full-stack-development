@@ -31,11 +31,11 @@
 Enter Your First Name<input type="text " [(ngmodule)]="fname" />
 <br>
 <b>Welcome {{fname}}</b>-->
-<h1>Angular Structural Directives</h1>
+ <!--<h1>Angular Structural Directives</h1>
 <button (click)="changeFlag()">Show or Hide Div</button>
 <br>
 <div *ngIf="flag" [ngStyle]="mystyle">
- <!-- My Div--><ul>
+  My Div<ul>
   <li *ngFor="let vec of vehicle" (click)="setSelectedItem(vec)">{{ vec }}</li>
  </ul>
  <br>
@@ -48,4 +48,21 @@ Enter Your First Name<input type="text " [(ngmodule)]="fname" />
  </div>
 <br>
 <button (click)="changeClass()">Change class</button>
-</div>
+</div>-->
+<!--<table width="80%" align="center">
+  <tr>
+    <th><a routerLink="/home">Home</a></th>
+    <th><a routerLink="/contact">Contact</a></th>
+    <th><a routerLink="/about">About Us</a></th>
+  </tr>
+</table>
+<br>
+<div>
+  This is the place to load a new components.
+  <router-outlet></router-outlet>
+</div>-->
+
+<h1>
+  Addition : {{sum}}
+</h1>
+<app-owncomponent></app-owncomponent>

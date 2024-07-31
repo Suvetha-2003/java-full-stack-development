@@ -1,6 +1,17 @@
-.MyClass1{
+/*.MyClass1{
     color: green;
 }
 .MyClass2{
     color: red;
+}*/
+
+th{
+    background-color: blue;
+    color: white;
+    font-weight: bold;
+    width: 100px;
+}
+a{
+    text-decoration: none;
+
 }
