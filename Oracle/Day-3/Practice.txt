@@ -1,0 +1,47 @@
+create table tbl_employee (eid number(5),ename varchar2(20),esalary number(5));
+insert into tbl_employee values(101,'Suvetha',50000);
+insert into tbl_employee values(102,'Thamarai',60000);
+insert into tbl_employee values(103,'Naveen',70000);
+insert into tbl_employee values(104,'Vinodha',40000);
+insert into tbl_employee values(105,'Vijay',90000);
+insert into tbl_employee values(105,'Rajesh',70000,30);
+select * from tbl_employee;
+alter table tbl_employee add dno number(3);
+update tbl_employee set dno=10 where eid=101;
+update tbl_employee set dno=10 where eid=102;
+update tbl_employee set dno=20 where eid=103;
+update tbl_employee set dno=20 where eid=104;
+update tbl_employee set dno=30 where eid=105;
+update tbl_employee set dno=30 where eid=106;
+select * from tbl_employee;
+select dno,count(*) from tbl_employee group by dno;
+select dno,count(*),avg(esalary),sum(esalary),min(esalary),max(esalary) from tbl_employee group by dno;
+select dno,count(*)no,count(*),sum(esalary),min(esalary),max(esalary) from tbl_employee group by dno order by dno;
+select dno,count(*),avg(esalary),sum(esalary),min(esalary),max(esalary) from tbl_employee group by dno having min(esalary)>50000 order by dno;
+
+create table tbl_student(reg_no number(5) primary key, student_name varchar2(20) not null,stud_age number(3) check(stud_age >0), stud_email varchar2(20) unique,stud_location varchar2(20) default 'Erode');
+insert into tbl_student (reg_no,student_name,stud_age,stud_email)values(101,'Thamarai',20,'tamarai12@gmail.com');
+
+
+create table tbl_department (dno number(5) primary key, dname varchar2(20));
+create table employee (eid number(5) primary key,ename varchar2(20),esalary number(5),dno number(5),foreign key(dno) references tbl_department(dno));
+insert into tbl_department values(101,'CSE');
+insert into employee values (1,'Suvetha',2000,101);
+insert into tbl_department values(102,'CSE');
+insert into employee values (2,'Thamarai',3000,101);
+
+
+VIEW:
+
+create view myview as select * from tbl_employee where dno=10;
+update myview set esalary=70000 where eid=101;
+drop view myview;
+
+
+ALIAS:
+
+select eid as "Employee Id",ename "Employee Name" from tbl_employee;
+select dno,count(*) as "Total No of Employees" from tbl_employee group by dno;
+
+
+
