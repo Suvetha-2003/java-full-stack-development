@@ -1,0 +1,27 @@
+create table agent (AGENT_CODE varchar2(4),AGENT_NAME varchar2(20),WORKING_AREA varchar2(20));
+create table customer (customer_code varchar2(5),customer_name varchar2(20),customer_area varchar2(20));
+insert into agent values('A101','agent1','chennai');
+insert into agent values('A102','agent2','chennai');
+insert into agent values('A103','agent3','Bangalore');
+insert into agent values('A104','agent4','Bangalore');
+insert into customer values('C101','customer1','chennai');
+insert into customer values('C102','customer2','chennai');
+insert into customer values('C103','customer3','chennai');
+insert into customer values('C104','customer4','Bangalore');
+insert into customer values('C105','customer5','Bangalore');
+select *from agent;
+select *from customer;
+select a.agent_name,customer_name,c.customer_area from agent a join customer c on a.working_area=c.customer_area;
+select agent.agent_name,customer.customer_name,customer.customer_area from agent join customer on agent.working_area=customer.customer_area;
+select agent.agent_name,customer.customer_name,customer.customer_area from agent join customer on agent.working_area<>customer.customer_area;
+insert into agent values('A105','agent5','New York');
+insert into customer values('C106','customer6','Delhi');
+select *from agent left join customer on agent.working_area=customer.customer_area;
+select *from agent right  join customer on agent.working_area=customer.customer_area;
+select * from agent full join customer on agent.working_area=customer.customer_area;
+select agent.agent_name,customer.customer_name,customer.customer_area from agent cross join customer;
+select agent.agent_name,customer.customer_name,customer.customer_area from agent natural join customer;
+select * from customer where customer_area=(select working_area from agent where agent_code='A101');
+select * from customer where customer_area in (select working_area from agent where agent_code = 'A101' or  agent_code='A104');
+
+
